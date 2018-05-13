@@ -25,7 +25,7 @@ Ticker=Ticker[0]
 def main():
     ls_key = 'Close'        
     start = datetime.datetime(2017,12,1)     
-    end = datetime.datetime(2018,5,12)
+    end = datetime.datetime.now()
     f =pdr.DataReader('ITB','morningstar',start,end)       
     data={'ITB': array(DataFrame(f[ls_key])).tolist()}
     dataFrame=DataFrame(data)
